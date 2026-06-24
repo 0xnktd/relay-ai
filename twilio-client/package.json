@@ -1,0 +1,16 @@
+{
+  "name": "relay-twilio-client",
+  "version": "1.0.0",
+  "description": "Relay Twilio browser phone client",
+  "main": "server.py",
+  "scripts": {
+    "build": "esbuild app.js --bundle --outfile=static/bundle.js --external:fs --external:crypto --external:querystring --external:url",
+    "watch": "esbuild app.js --bundle --outfile=static/bundle.js --watch --external:fs --external:crypto --external:querystring --external:url"
+  },
+  "dependencies": {
+    "@twilio/voice-sdk": "^2.18.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
+  }
+}
